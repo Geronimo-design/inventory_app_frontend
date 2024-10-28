@@ -17,7 +17,7 @@ const SignIn = ({ setIsAdmin }) => {
 
     try {
       // Sending a POST request to the backend
-      const response = await fetch('http://localhost:8000/users/signIn', {
+      const response = await fetch('/users/signIn', {
         // Updating the URL to the backend endpoint
         method: 'POST',
         headers: {

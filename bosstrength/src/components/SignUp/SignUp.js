@@ -2,10 +2,14 @@
 
 // A function that allows a new user to sign up
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../Header/Header';
 import './SignUp.css';
 
 const SignUp = () => {
+  // Creating an instance useNavigate
+  const navigate = useNavigate();
+
   // A state variable that contains the new user's information
   const [signupData, setSignupData] = useState({ username: '', password: '' });
 
@@ -19,7 +23,7 @@ const SignUp = () => {
   const handleSignupSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/users/signUp', {
+      const response = await fetch('/users/signUp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,6 +36,8 @@ const SignUp = () => {
       alert(`Error during signup: ${error}`);
       console.error(`Error during signup: ${error}`);
     }
+    // Redirects to the homepage for the new user to sign in
+    navigate('/');
   };
 
   return (

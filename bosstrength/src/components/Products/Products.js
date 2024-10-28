@@ -56,7 +56,7 @@ const ProductList = () => {
   };
 
   // The root URL that API calls will be made to
-  const API_URL = 'http://localhost:8000/products';
+  const API_URL = '/products';
 
   // Function to add a product
   const addProduct = () => {
@@ -228,7 +228,7 @@ const ProductList = () => {
                 <input
                   type='text'
                   name='name'
-                  placeholder='Product Name'
+                  placeholder='Name'
                   value={newProduct.name}
                   onChange={handleInputChange}
                 />
@@ -289,7 +289,7 @@ const ProductList = () => {
                   <div className='order-more-pane'>
                     <input
                       type='number'
-                      placeholder='How much more to order?'
+                      placeholder='quantity'
                       value={orderQuantity[product._id] || ''}
                       onChange={(e) =>
                         handleOrderQuantityChange(e, product._id)

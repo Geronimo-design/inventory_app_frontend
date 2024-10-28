@@ -166,3 +166,11 @@ The end users of the application will include:
 # Third-party APIs used in this application
 
 - None noted. This application is authentic to itself and does not use any third-party APIs as all of the data needed is served by its own backend to be used in its frontend, without requiring external resources.
+
+## Links to deployed application
+
+# Backend
+
+https://inventory-management-app-backend-i582.onrender.com/
+
+# Frontend

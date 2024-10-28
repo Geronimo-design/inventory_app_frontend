@@ -31,13 +31,17 @@ button {
   margin-right: 1vw;
 }
 
-.addProductForm input {
+.addProductForm {
   margin: 10px 0;
-  padding: 10px;
-  width: 90%;
+  padding: 25px;
+  width: 15%;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+}
+
+input {
+  width: 50%;
 }
 
 .addProductForm .addProductForm {
@@ -56,19 +60,20 @@ button {
 }
 
 .product-container {
-  display: flex; /* Displays product cards in a line next to each other */
+  display: flex; /* Displays product cards in a line next to each other and ensures that their content does not overflow */
+  flex-wrap: wrap;
 }
 
 .productCard {
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 15px;
+  padding: 25px;
   margin: 10px;
   text-align: center;
-  width: 25vw;
+  width: 15%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .productImage {
@@ -81,8 +86,4 @@ button {
 
 .productCard:hover .productImage {
   transform: scale(1.1); /* Zoom into the image on hover */
-}
-
-.order-more-pane {
-  display: flex;
 }
