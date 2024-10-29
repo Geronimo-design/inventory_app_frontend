@@ -7,6 +7,9 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 import Header from '../Header/Header';
 
 const ProductList = () => {
+  const API_URL =
+    'https://inventory-management-app-backend-i582.onrender.com/products';
+
   // Retrieving the user's JWT and admin status from localStorage
   const token = localStorage.getItem('token');
   const isAdmin = localStorage.getItem('isAdmin');
@@ -55,9 +58,6 @@ const ProductList = () => {
     }));
   };
 
-  // The root URL that API calls will be made to
-  const API_URL = '/products';
-
   // Function to add a product
   const addProduct = () => {
     // First checking if the product does not already exist
@@ -74,6 +74,7 @@ const ProductList = () => {
       .then((response) => response.json())
       .then((data) => {
         setProducts((prev) => [...prev, data]);
+
         setNewProduct({
           name: '',
           price: '',

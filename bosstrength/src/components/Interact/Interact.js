@@ -19,7 +19,8 @@ function Interact() {
   const [isLoading, setIsLoading] = useState(true);
 
   // The root URL that API calls will be made to
-  const API_URL = '/announcements';
+  const API_URL =
+    'https://inventory-management-app-backend-i582.onrender.com/announcements';
 
   // Ensuring that the announcements are fetched only once when the component mounts
   useEffect(() => {

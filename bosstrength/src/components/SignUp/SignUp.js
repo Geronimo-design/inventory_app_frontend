@@ -23,13 +23,16 @@ const SignUp = () => {
   const handleSignupSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/users/signUp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(signupData),
-      });
+      const response = await fetch(
+        'https://inventory-management-app-backend-i582.onrender.com/users/signUp',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(signupData),
+        }
+      );
       const data = await response.json();
       alert(data.message);
     } catch (error) {

@@ -162,6 +162,7 @@ The end users of the application will include:
 - Two types of users exist: normal users and admins.
 - Normal users have different permissions to admins, and one cannot be exchanged for another thanks to JSON Web Tokens.
 - JSON Web Tokens prevent unathorised access.
+- Deployment through Render grants secured http protocols.
 
 # Third-party APIs used in this application
 
@@ -174,3 +175,7 @@ The end users of the application will include:
 https://inventory-management-app-backend-i582.onrender.com/
 
 # Frontend
+
+https://inventory-app-frontend-9ghf.onrender.com/
+
+This application has been deployed separately as a frontend and backend to keep things modular.

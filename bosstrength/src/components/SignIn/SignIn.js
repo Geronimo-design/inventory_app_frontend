@@ -17,14 +17,17 @@ const SignIn = ({ setIsAdmin }) => {
 
     try {
       // Sending a POST request to the backend
-      const response = await fetch('/users/signIn', {
-        // Updating the URL to the backend endpoint
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }), // Send username and password in the request body
-      });
+      const response = await fetch(
+        'https://inventory-management-app-backend-i582.onrender.com/users/signIn',
+        {
+          // Updating the URL to the backend endpoint
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password }), // Send username and password in the request body
+        }
+      );
 
       if (response.ok) {
         // If the response is successful
