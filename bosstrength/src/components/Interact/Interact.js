@@ -151,11 +151,13 @@ function Interact() {
           announcement._id === id ? updatedData : announcement
         )
       );
+
+      // Re-fetches announcements from the database with the updated announcement edited
+      fetchAnnouncements();
     } catch (error) {
       console.error('Error updating announcement:', error);
       alert('Failed to update announcement. Please try again.');
     }
-    window.location.reload();
   };
 
   return (
