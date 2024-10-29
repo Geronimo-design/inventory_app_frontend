@@ -63,6 +63,13 @@ const ProductList = () => {
     // First checking if the product does not already exist
     if (!newProduct.name || !newProduct.price) return;
 
+    // Prevents an admin from entering an invalid image URL into the new product's image field
+    if (!/\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(newProduct.image)) {
+      console.error('Invalid Image URL');
+      alert('Invalid image URL');
+      return;
+    }
+
     // Performs a POST request, with the object's data to the backend and stores it in the database
     fetch(API_URL, {
       method: 'POST',

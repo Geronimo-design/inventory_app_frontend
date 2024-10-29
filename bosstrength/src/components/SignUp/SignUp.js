@@ -48,6 +48,7 @@ const SignUp = () => {
       <Header />
       <div className='form-container'>
         <h2>Signup</h2>
+        <h6>Admin's usernames must end with @admin.com</h6>
         <form onSubmit={handleSignupSubmit}>
           <input
             type='text'
